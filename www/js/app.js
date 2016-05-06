@@ -45,7 +45,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-feed': {
         templateUrl: 'templates/tab-feed.html',
-        controller: 'DashCtrl'
+        controller: 'FeedCtrl'
       }
     }
   })
@@ -55,7 +55,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-map': {
           templateUrl: 'templates/tab-map.html',
-          controller: 'ChatsCtrl'
+          controller: 'MapCtrl'
         }
       }
     });

@@ -6,27 +6,24 @@
         <input type="text" placeholder="Search">
       </label>
     </div>
-    <div class="list card">
+    <div class="list card" ng-repeat=" item in data">
 
-  <div class="item item-avatar">
-    <img src="mcfly.jpg">
-    <h2>Marty McFly</h2>
-    <p>November 05, 1955</p>
+      <div class="item item-avatar">
+        <img ng-src="{{item.user.profile_picture}}">
+        <h2>{{item.user.full_name}}</h2>
+        <p>{{item.caption.created_time | date}}ERRO</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{item.images.low_resolution.url}}">
+        <p>
+          {{item.caption.text}}
+        </p>
+        <p>
+          <a href="#" class="subdued">{{item.likes.count}} Like</a>
+          <a href="#" class="subdued">{{item.comments.count}} Comments</a>
+        </p>
+      </div>
   </div>
-
-  <div class="item item-body">
-    <img class="full-image" src="delorean.jpg">
-    <p>
-      This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-      the content is from a card-body consisting of an image and paragraph text. The footer
-      consists of tabs, icons aligned left, within the card-footer.
-    </p>
-    <p>
-      <a href="#" class="subdued">1 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
-    </p>
-  </div>
-
-</div>
   </ion-content>
 </ion-view>
