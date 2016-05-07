@@ -1,12 +1,15 @@
 <ion-view view-title="Feed">
   <ion-content class="padding">
-    <div class="list list-inset">
-      <label class="item item-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search">
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="hashtag" ng-model="hashtag.name">
       </label>
+      <button class="button button-small" ng-click="getMedia()">
+        Search
+      </button>
     </div>
-    <div class="list card" ng-repeat=" item in data">
+    
+    <div class="list card" ng-repeat=" item in data" ng-model="data">
 
       <div class="item item-avatar">
         <img ng-src="{{item.user.profile_picture}}">
@@ -20,7 +23,7 @@
           {{item.caption.text}}
         </p>
         <p>
-          <a href="#" class="subdued">{{item.likes.count}} Like</a>
+          <a href="#" class="subdued">{{item.likes.count}} Likes</a>
           <a href="#" class="subdued">{{item.comments.count}} Comments</a>
         </p>
       </div>
