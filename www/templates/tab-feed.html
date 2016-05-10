@@ -8,7 +8,7 @@
         Search
       </button>
     </div>
-    
+
     <div class="list card" ng-repeat=" item in data" ng-model="data">
 
       <div class="item item-avatar">
@@ -19,12 +19,10 @@
 
       <div class="item item-body">
         <img class="full-image" ng-src="{{item.images.low_resolution.url}}">
+        <div linked-hashtags info="item.caption.text" search='searchHashtag(hashtag)' ></div>
         <p>
-          {{item.caption.text}}
-        </p>
-        <p>
-          <a href="#" class="subdued">{{item.likes.count}} Likes</a>
-          <a href="#" class="subdued">{{item.comments.count}} Comments</a>
+          <span class="subdued">{{item.likes.count}} Likes</span>
+          <span href="#" class="subdued">{{item.comments.count}} Comments</span>
         </p>
       </div>
   </div>
